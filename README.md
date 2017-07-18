@@ -1,5 +1,41 @@
-Red Lounge
+Red Lounge as per jemsu
 ===========
+
+This is by fork of the original [@shift8creative](http://www.twitter.com/shift8creative) theme.  
+I did some things.
+
+- Fixed it so that it now works as of Hugo 0.25.1.
+- Stole a bunch of ideas from [yihui/hugo-lithium-theme](https://github.com/yihui/hugo-lithium-theme)
+    + Different highlight.js behavior, overrides parts of any given highlight theme
+    + MathJax
+    + More relative URLs, I think
+- Added piwik support, configure via your `config.toml`:
+
+```
+[params]
+
+piwikID = "12"
+piwikURL = "https://my-piwik.tld/"
+```
+
+- Added config option for custom CSS:
+
+```
+[params.customCSS]
+
+tweaks = "css/tweaks.css"
+bigfoot = "css/bigfoot-number.css"
+```
+
+- Oh yeah, I added bigfoot.js, and by extension, jQuery. Sorry.
+- Removed lightbox
+- Different footer, hardcoded with Hugo and blogdown credits but displays site author
+    + Removed `[[menu.footer]]`
+- A bunch of small CSS tweaks here and there
+- Honestly I can't remember, this isn't really meant to be published as an alternative fork, it's just my personal trial-and-error ridden attempt to make it my own
+
+
+# Original README.md
 
 This is an open-source Hugo theme designed by [@shift8creative](http://www.twitter.com/shift8creative) to be responsive and clean. It uses Pure.css and contains a few web fonts from Google as well as Font Awesome icons. 
 So despite it being simple, it has a lot of flexibility in terms of typography and design elements. It's also quite configurable as it has a few variables to change the

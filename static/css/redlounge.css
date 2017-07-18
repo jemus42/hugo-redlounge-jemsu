@@ -475,7 +475,7 @@ hr.thin {
 	    transition: all .51s;
 	}
 
-  .sidebarphoto:hover{
+    .sidebarphoto:hover{
 	    width:160px;
 	    height:160px;
 	    border-radius: 30%;
