@@ -67,7 +67,7 @@
 
             {{ .Content }}
 	
-			{{ if .Params.socialsharing }}
+			{{ if .Site.Params.socialsharing }}
 		    	{{ partial "socialsharing.html" . }}
 		    {{ end }}
 
@@ -124,7 +124,7 @@
 		</script>
 	{{ end }}
 
-	{{ if .Params.socialsharing }}
+	{{ if .Site.Params.socialsharing }}
 		<script type="text/javascript">
 			function popupShare(url) {
 				window.open(url, '_blank', 'scrollbars,resizable,height=525,width=600');
