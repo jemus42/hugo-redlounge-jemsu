@@ -34,11 +34,11 @@
                     <span class="post-reading-time"><i class="fa fa-clock-o"></i> <em>{{.ReadingTime}} min. read</em></span>
                 {{ end }}
                 {{ if .Params.categories }}
-                <div class="post-categories">
+                <span class="post-categories">
                     {{ range .Params.categories }}
                     <a class="post-category post-category-{{ . | urlize }}" href="/categories/{{ . | urlize }}">{{ . }}</a>
                     {{ end }}
-                </div>
+                </span>
                 {{ end }}
             </p>
             <article class="post-summary">
