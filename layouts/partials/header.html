@@ -21,7 +21,6 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
   <![endif]-->
 
-  <link rel="stylesheet" href="{{ "css/redlounge.css" | relURL }}" media="all">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href='//fonts.googleapis.com/css?family=Raleway:400,200,100,700,300,500,600,800' rel='stylesheet' type='text/css'>
   <link href='//fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
@@ -35,6 +34,9 @@
 
   {{ partial "piwik" . }}
   {{ partial "head_highlightjs" . }}
+  {{ partial "header_rrssb" . }}
+
+  <link rel="stylesheet" href="{{ "css/redlounge.css" | relURL }}" media="all">
 
   {{ range .Site.Params.customCSS }}
   <link rel="stylesheet" href="{{ . | relURL }}">

@@ -1,4 +1,4 @@
-<footer class="sidefooter">
+<footer class="footer">
 <hr class="thin" />
     <ul class="footer-links">
       <li>CC-BY <a class="footer-links-kudos">{{ .Site.Params.author }}</a></li>
@@ -16,5 +16,4 @@
 {{ partial "footer_mathjax" . }}
 {{ partial "footer_highlightjs" . }}
 {{ partial "footer_bigfoot" . }}
-<script src="{{ "/js/rrssb.min.js" | relURL }}"></script>
-
+{{ partial "footer_rrssb" . }}
