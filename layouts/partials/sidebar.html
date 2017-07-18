@@ -11,9 +11,14 @@
 
     <nav class="nav">
       <ul class="nav-list">
-        <li class="nav-item"><span class="nav-item-separator">//</span><a href="{{ .Site.BaseURL }}">Home</a></li>
+        <li class="nav-item">
+          <span class="nav-item-separator">//</span>
+          <a href="{{ .Site.BaseURL }}">Home</a>
+        </li>
         {{ range .Site.Menus.main }}
-          <li class="nav-item"><span class="nav-item-separator">//</span><a href="{{ .URL }}">{{ .Name }}</a></li>
+          <li class="nav-item"><span class="nav-item-separator">//</span>
+            <a href="{{ .URL }}">{{ .Name }}</a>
+          </li>
         {{ end }}
       </ul>
 
@@ -22,9 +27,12 @@
       <header class="nav-item">{{ upper $key }}</header>
 
         <ul>
-          {{ range first 5 $value.ByCount }}<li class="nav-item">
-          <span class="nav-item-separator">//</span>
-          <a href="/{{ $key }}/{{ .Name | urlize }}">{{ .Name }}</a></li>{{ end }}
+          {{ range first 5 $value.ByCount }}
+          <li class="nav-item">
+            <span class="nav-item-separator">//</span>
+            <a href="/{{ $key }}/{{ .Name | urlize }}">{{ .Name }}</a>
+          </li>
+          {{ end }}
         </ul>
 
     </section>

@@ -8,7 +8,7 @@
       {{ partial "listtop.html" . }}
 
       <div class="posts">
-        {{ range .Data.Pages }}
+        {{ range .Pages }}
           <section  class="post">
             <header class="post-header">
             {{ if .Params.thumbnail }}
@@ -23,7 +23,10 @@
             <p class="post-meta">
             	{{ if not .Params.nodate }}
 		          <span class="post-date">
-		            <span class="post-date-day"><sup>{{ .Date.Format "2" }}</sup></span><span class="post-date-separator">/</span><span class="post-date-month">{{ .Date.Format "Jan" }}</span> <span class="post-date-year">{{ .Date.Format "2006" }}</span>
+		            <span class="post-date-day"><sup>{{ .Date.Format "2" }}</sup></span>
+                <span class="post-date-separator">/</span>
+                <span class="post-date-month">{{ .Date.Format "Jan" }}</span>
+                <span class="post-date-year">{{ .Date.Format "2006" }}</span>
 		          </span>
       				{{ end }}
       				{{ if not .Params.noauthor }}
@@ -36,17 +39,17 @@
       					<div class="post-categories">
 				        {{ $Site := .Site }}
       					{{ range .Params.categories }}
-					        <a class="post-category post-category-{{ . | urlize }}" href="{{ $Site.BaseURL}}/categories/{{ . | urlize }}">{{ . }}</a>
+					        <a class="post-category post-category-{{ . | urlize }}" href="/categories/{{ . | urlize }}">{{ . }}</a>
       					{{ end }}
       					</div>
       				{{ end }}
             </p>
             <article class="post-summary">
-            	{{ .Summary }}
+            	{{ .Summary | plainify | markdownify }}
             </article>
-			<div class="read-more-link">
-				<a href="{{ .RelPermalink }}"><span class="read-more-slashes">//</span>Read More...</a>
-			</div>
+      			<div class="read-more-link">
+      				<a href="{{ .RelPermalink }}"><span class="read-more-slashes">//</span>Read More...</a>
+      			</div>
           </section>
         {{ end }}
       </div>
