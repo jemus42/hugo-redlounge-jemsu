@@ -22,13 +22,7 @@
   <![endif]-->
 
   <link rel="stylesheet" href="{{ "css/redlounge.css" | relURL }}" media="all">
-  <link rel="stylesheet" href="{{ "css/tweaks.css" | relURL }}" media="all">
-
-  {{ range .Site.Params.customCSS }}
-  <link rel="stylesheet" href="{{ . | relURL }}">
-  {{ end }}
-
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href='//fonts.googleapis.com/css?family=Raleway:400,200,100,700,300,500,600,800' rel='stylesheet' type='text/css'>
   <link href='//fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
 
@@ -39,10 +33,12 @@
   <!-- RSS -->
   <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 
-  {{ partial "syntaxhighlight.html" . }}
   {{ partial "piwik" . }}
   {{ partial "head_highlightjs" . }}
 
+  {{ range .Site.Params.customCSS }}
+  <link rel="stylesheet" href="{{ . | relURL }}">
+  {{ end }}
 
   {{ if .Site.Params.categoriescss }}
     <link rel="stylesheet" type="text/css" href="{{ .Site.Params.categoriescss }}">
