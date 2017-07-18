@@ -16,6 +16,20 @@
           <li class="nav-item"><span class="nav-item-separator">//</span><a href="{{ .URL }}">{{ .Name }}</a></li>
         {{ end }}
       </ul>
+
+    {{ range $key, $value := .Site.Taxonomies }}
+    <section>
+      <header class="nav-item">{{ upper $key }}</header>
+
+        <ul>
+          {{ range first 10 $value.ByCount }}<li class="nav-item">
+          <span class="nav-item-separator">//</span>
+          <a href="{{ $.Site.BaseURL}}/{{ $key }}/{{ .Name | urlize }}">{{ .Name }}</a></li>{{ end }}
+        </ul>
+
+    </section>
+    {{ end }}
+
     </nav>
 
     {{ if .Site.Menus.social }}
