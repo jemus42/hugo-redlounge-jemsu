@@ -69,10 +69,8 @@
          {{ .Content }}
        </section>
 
-			{{ if .Site.Params.socialsharing }}
-            {{ if .Params.socialsharing }}
+            {{ if not .Params.nosocialsharing }}
 		    	{{ partial "socialsharing.html" . }}
-		  {{ end }}
           {{ end }}
 
 			{{ if .Params.tags }}
@@ -128,8 +126,7 @@
 		</script>
 	{{ end }}
 
-	{{ if .Site.Params.socialsharing }}
-    {{ if .Params.socialsharing }}
+    {{ if not .Params.nosocialsharing }}
 		<script type="text/javascript">
 			function popupShare(url) {
 				window.open(url, '_blank', 'scrollbars,resizable,height=525,width=600');
@@ -137,7 +134,6 @@
 			}
 		</script>
 	{{ end }}
-    {{ end }}
 
   {{ partial "bodyend.html" . }}
 </body>
