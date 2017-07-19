@@ -116,11 +116,14 @@ h2.brand-tagline {
     padding-bottom: 1rem;
 }
 .nav-list-taxonomies {
-    /*margin: 0;*/
-    /*padding: 0;*/
+    margin: 1rem 0 0 0;
+    padding: 0;
     list-style: none;
-    padding-bottom: 1rem;
-    padding-left: 10rem;
+}
+.nav-list-social {
+    margin: 2rem 0 0 0;
+    padding: 0;
+    list-style: none;
 }
 .nav-item {
     display: inline-block;
