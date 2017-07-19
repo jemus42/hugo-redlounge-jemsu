@@ -1,17 +1,19 @@
 <footer class="footer">
 <hr class="thin" />
     <ul class="footer-links">
-      <li>CC-BY <a class="footer-links-kudos">{{ .Site.Params.author }}</a></li>
+      <li>
+        CC-BY <a>{{ .Site.Params.author }}</a>
+      </li>
       <span class="decorative-marker">//</span>
       <li>
-      Made with
-        <a href="https://gohugo.io/" class="footer-links-kudos">Hugo {{ .Hugo.Version }}</a>
-        &amp;
-        <a href="https://github.com/rstudio/blogdown" class="footer-links-kudos">blogdown</a>
+        <a href="https://gohugo.io/">Hugo <sub>{{ .Hugo.Version }}</sub></a>
+      </li>
+      <span class="decorative-marker">//</span>
+      <li>
+        <a href="https://github.com/rstudio/blogdown">blogdown</a>
       </li>
     </ul>
 </footer>
-
 
 {{ partial "footer_mathjax" . }}
 {{ partial "footer_highlightjs" . }}

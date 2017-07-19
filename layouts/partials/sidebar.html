@@ -13,10 +13,6 @@
 
     <nav class="nav">
       <ul class="nav-list">
-        <li class="nav-item">
-          <span class="nav-item-separator">//</span>
-          <a href="{{ .Site.BaseURL }}">Home</a>
-        </li>
         {{ range .Site.Menus.main }}
           <li class="nav-item"><span class="nav-item-separator">//</span>
             <a href="{{ .URL }}">{{ .Name }}</a>
@@ -28,8 +24,8 @@
     <section>
       <header class="nav-item">{{ upper $key }}</header>
 
-        <ul>
-          {{ range first 5 $value.ByCount }}
+        <ul class="nav-list-taxonomies">
+          {{ range first 6 $value.ByCount }}
           <li class="nav-item">
             <span class="nav-item-separator">//</span>
             <a href="/{{ $key }}/{{ .Name | urlize }}">{{ .Name }}</a>
@@ -44,12 +40,16 @@
 
     {{ if .Site.Menus.social }}
     <div class="social-buttons">
+    <ul class="nav-list">
       {{ range .Site.Menus.social }}
         {{ if .URL }}
-        <a href="{{ .URL }}" target="_blank">{{ .Pre }}</a>
+        <li class="nav-item">
+          <span class="nav-item-separator">//</span>
+          <a href="{{ .URL }}" target="_blank">{{ .Pre }}</a>
+        </li>
         {{ end }}
       {{ end }}
-
+    </ul>
     </div>
     {{ end }}
 

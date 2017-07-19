@@ -54,28 +54,22 @@
 		    	{{ partial "socialsharing2.html" . }}
 		    {{ end }}
 
-			{{ if .Params.bannerinline }}
-				<img src="{{ .Params.bannerinline }}" class="pure-img content-banner-image-inline"
-                                     style="{{ if .Params.bannerfill }}width: 100%;{{ end }}
-                                            {{ if .Params.bannerheight }}height: {{ .Params.bannerheight }}px;{{ end }}" />
-			{{ end }}
-
        <section class="post-content">
          {{ .Content }}
        </section>
 
             {{ if not .Params.nosocialsharing }}
-		    	{{ partial "socialsharing.html" . }}
-          {{ end }}
+              {{ partial "socialsharing.html" . }}
+            {{ end }}
 
-			{{ if .Params.tags }}
-				<div class="tags-list">
-					<span class="dark-red">Tags</span><span class="decorative-marker">//</span>
-					{{ range .Params.tags }}
-	                <a class="post-tag post-tag-{{ . | urlize }}" href="{{ $Site.BaseURL}}/tags/{{ . | urlize }}">{{ . }}</a>,
-	                {{ end }}
-				</div>
-			{{ end }}
+            {{ if .Params.tags }}
+                <div class="tags-list">
+                    <span class="dark-red">Tags</span><span class="decorative-marker">//</span>
+                    {{ range .Params.tags }}
+                    <a class="post-tag post-tag-{{ . | urlize }}" href="{{ $Site.BaseURL}}/tags/{{ . | urlize }}">{{ . }}</a>
+                    {{ end }}
+                </div>
+            {{ end }}
 
 			{{ if not .Params.nopaging }}
 				<div class="paging">
