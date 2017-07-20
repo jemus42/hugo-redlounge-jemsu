@@ -2,14 +2,18 @@
   <div class="header">
     {{ partial "sidebarheader.html" . }}
 
-	{{ if .Site.Params.sidebarphoto}}
-	  <a href="/">
-	  <img src="{{ .Site.Params.sidebarphoto }}" class="sidebarphoto">
-	  </a>
-	{{ end }}
+    {{ if .Site.Params.sidebarphoto}}
+      <a href="/">
+      <img src="{{ .Site.Params.sidebarphoto }}" class="sidebarphoto">
+      </a>
+    {{ end }}
 
-    {{ if .Site.Params.sidebartitle }}<h1 class="brand-title">{{ .Site.Params.sidebartitle }}</h1>{{ end }}
-    {{ if .Site.Params.sidebartagline }}<h2 class="brand-tagline">{{ .Site.Params.sidebartagline }}</h2>{{ end }}
+    {{ if .Site.Params.sidebartitle }}
+    <h1 class="brand-title">{{ .Site.Params.sidebartitle }}</h1>
+    {{ end }}
+    {{ if .Site.Params.sidebartagline }}
+    <h2 class="brand-tagline">{{ .Site.Params.sidebartagline }}</h2>
+    {{ end }}
 
     <nav class="nav">
       <ul class="nav-list">
@@ -36,8 +40,6 @@
     </section>
     {{ end }}
 
-    </nav>
-
     {{ if .Site.Menus.social }}
     <div class="social-buttons">
     <ul class="nav-list-social">
@@ -52,6 +54,6 @@
     </ul>
     </div>
     {{ end }}
-
+    </nav>
   </div>
 </div>
