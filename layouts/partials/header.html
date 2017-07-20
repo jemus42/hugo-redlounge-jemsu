@@ -5,17 +5,16 @@
   </title>
 
   {{ partial "meta.html" . }}
-
   {{ partial "og.html" . }}
 
   <!-- CSS -->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/base-min.css">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/pure-min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/base-min.css">
+  <!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">-->
   <!--[if lte IE 8]>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/grids-responsive-min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
   <!--<![endif]-->
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
@@ -24,13 +23,6 @@
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href='//fonts.googleapis.com/css?family=Raleway:400,200,100,700,300,500,600,800' rel='stylesheet' type='text/css'>
   <link href='//fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
-
-  <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/favicon.png">
-
-  <!-- RSS -->
-  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 
   {{ partial "piwik" . }}
   {{ partial "head_highlightjs" . }}
@@ -45,6 +37,13 @@
   {{ if .Site.Params.categoriescss }}
     <link rel="stylesheet" type="text/css" href="{{ .Site.Params.categoriescss }}">
   {{ end }}
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  <!-- RSS -->
+  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 
   {{ template "_internal/google_analytics.html" . }}
 </head>

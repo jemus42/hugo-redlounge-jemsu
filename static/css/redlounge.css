@@ -332,11 +332,6 @@ a.post-category:hover {
 	text-decoration: underline;
 }
 
-/* Banner Image */
-.content-banner-image {
-	overflow: hidden;
-}
-
 /* Tags */
 .tags-list {
 	clear: left;
@@ -364,10 +359,6 @@ a.post-category:hover {
 }
 .paging-older, .paging-newer {
 	margin-bottom: 0.25rem;
-}
-.paging-label {
-	color: #999;
-	font-style: italic;
 }
 
 /* ToC */
@@ -422,12 +413,8 @@ nav#TableOfContents ul:first-child {
         margin-left: 25%;
     }
 
-    .content-banner-image {
-    	margin-left: 25%;
-    }
-
     .header {
-        margin: 30% 2rem 0;
+        margin: 39% 2rem 39% 4rem;
         text-align: right;
     }
 
