@@ -8,7 +8,6 @@
             {{ partial "listtop.html" . }}
 
           <div class="posts">
-            {{ $Site := .Site }}
             {{ range where .Pages "Section" "post" }}
             <section  class="post">
                 <header class="post-header">
@@ -23,7 +22,7 @@
                 </header>
             {{ partial "post_meta.html" . }}
             <article class="post-summary">
-                  {{ .Summary | truncate 100 }}
+                  {{ .Content | safeHTML | truncate 300 }}
             </article>
               <div class="read-more-link">
                   <a href="{{ .RelPermalink }}"><span class="read-more-slashes">//</span>
