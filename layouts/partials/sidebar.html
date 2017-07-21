@@ -9,7 +9,7 @@
     {{ end }}
 
     {{ if .Site.Params.sidebartitle }}
-    <h1 class="brand-title">{{ .Site.Params.sidebartitle }}</h1>
+    <h1 class="brand-title"><a href="{{ .Site.BaseURL }}">{{ .Site.Params.sidebartitle }}</a></h1>
     {{ end }}
     {{ if .Site.Params.sidebartagline }}
     <h2 class="brand-tagline">{{ .Site.Params.sidebartagline }}</h2>
