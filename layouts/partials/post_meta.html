@@ -8,14 +8,27 @@
     </span>
     {{ end }}
     {{ if not .Params.noauthor }}
-        {{ if .Params.author }} &mdash; <a class="post-author" {{ if .Params.authorlink }}href="{{ .Params.authorlink }}"{{ end }}>{{ .Params.author }}</a>{{ end }}
+        {{ if .Params.author }}
+            &mdash;
+            <a class="post-author" 
+            {{ if .Params.authorlink }}href="{{ .Params.authorlink }}"
+            {{ end }}>{{ .Params.author }}</a>
+        {{ end }}
     {{ end }}
     {{ if not .Params.noread }}
-        <span class="post-reading-time"><i class="fa fa-clock-o"></i> <em>{{.ReadingTime}} min. read</em></span>
+        <span class="post-reading-time">
+            <span class="decorative-marker">/</span>
+            <i class="fa fa-file-text-o"></i>
+            <em>~{{ .FuzzyWordCount }} words</em>
+            <span class="decorative-marker">/</span>
+            <i class="fa fa-clock-o"></i>
+            <em>{{.ReadingTime}} min. read</em>
+        </span>
     {{ end }}
     {{ if .Params.categories }}
     <span class="post-categories">
         {{ range .Params.categories }}
+        <span class="decorative-marker">/</span>
         <a class="post-category post-category-{{ . | urlize }}" href="/categories/{{ . | urlize }}">{{ . }}</a>
         {{ end }}
     </span>

@@ -60,3 +60,25 @@ blockquote p:last-child {
 .hljs pre {
   padding: 10px;
 }
+
+/* Styling categories */
+.post-category-rstats {
+  color: #fff;
+  background: #77ABD9;
+}
+.post-category-tvshows {
+  color: #fff;
+  background: #E54028;
+}
+.post-category-meta {
+  color: #fff;
+  background: #2d303b;
+}
+.post-category-tech {
+  color: #fff;
+  background: #2d303b;
+}
+.post-category-lolz {
+  color: #fff;
+  background: #2d303b;
+}
