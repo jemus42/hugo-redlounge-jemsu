@@ -1,13 +1,19 @@
 <footer>
 <hr class="thin" />
     <ul class="footer-links">
+    {{ if .RSSLink }}
+      <li>
+        <span class="decorative-marker">//</span>
+        <a href="{{ .RSSLink }}"><i class='fa fa-rss'></i></a>
+      </li>
+    {{ end }}
       <li>
         <span class="decorative-marker">//</span>
         <a>{{ .Site.Params.author }}</a>
       </li>
       <li>
-      <span class="decorative-marker">//</span>
-      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>
+        <span class="decorative-marker">//</span>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>
       </li>
       <li>
         <span class="decorative-marker">//</span>

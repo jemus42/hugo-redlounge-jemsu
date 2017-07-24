@@ -1,6 +1,6 @@
 ---
 title: ""
-date: {{ .Date.Format "2006-01-02" }}
+date: ""
 draft: true
 description: ""
 nodate: false
