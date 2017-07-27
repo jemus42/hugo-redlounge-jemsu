@@ -1,5 +1,7 @@
 {{ if .Site.Params.lightbox }}
+<!--
 <script src="https://cdn.jsdelivr.net/lightbox2/2.51/lightbox.js" integrity="sha256-56Px+GBwkYYQpG7/V0X1A6K5aSXoMKebxsJmSdJI+K8=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/lightbox2/2.51/jquery-ui-1.8.18.custom.min.js" integrity="sha256-Y6ctOs20DDYtA77MmHhwNs4vAr4jK5ZN1MZWm7Uu6To=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/lightbox2/2.51/jquery.smooth-scroll.min.js" integrity="sha256-3Gi/MkOpPP4g6fd9vwmv3bFU2o9rUF02D/swjU2EcHA=" crossorigin="anonymous"></script>
-{{ end }}
+-->
+<script src="{{ "/js/lightbox-plus-jquery.min.js" | relURL }}"></script>{{ end }}

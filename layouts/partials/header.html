@@ -1,8 +1,6 @@
 {{ partial "doctype.html" . }}
 <head>
-  <title>
-    {{ .Title }}{{ if ne .Title .Site.Title }} // {{ .Site.Title }}{{ end }}
-  </title>
+  <title>{{ .Title }}{{ if ne .Title .Site.Title }} // {{ .Site.Title }}{{ end }}</title>
 
   {{ partial "meta.html" . }}
   {{ partial "og.html" . }}
@@ -23,15 +21,12 @@
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href='//fonts.googleapis.com/css?family=Raleway:400,200,100,700,300,500,600,800' rel='stylesheet' type='text/css'>
   <link href='//fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
-
   {{ partial "piwik" . }}
   {{ partial "header_highlightjs" . }}
   {{ partial "header_rrssb" . }}
   {{ partial "header_katex" . }}
   {{ partial "header_lightboxjs" . }}
-
   <link rel="stylesheet" href="{{ "css/redlounge.css" | relURL }}" media="all">
-
   {{ range .Site.Params.customCSS }}
   <link rel="stylesheet" href="{{ . | relURL }}">
   {{ end }}

@@ -7,14 +7,9 @@
         <span class="post-date-year">{{ .Date.Format "2006" }}</span>
     </span>
     {{ end }}
-    {{ if not .Params.noauthor }}
-        {{ if .Params.author }}
-            &mdash;
-            <a class="post-author" 
-            {{ if .Params.authorlink }}href="{{ .Params.authorlink }}"
-            {{ end }}>{{ .Params.author }}</a>
-        {{ end }}
-    {{ end }}
+    {{ if not .Params.noauthor }}{{ if .Params.author }}
+    &mdash;<a class="post-author" {{ if .Params.authorlink }}href="{{ .Params.authorlink }}" {{ end }}>{{ .Params.author }}</a>
+    {{ end }}{{ end }}
     {{ if not .Params.noread }}
         <span class="post-reading-time">
             <span class="decorative-marker">/</span>
