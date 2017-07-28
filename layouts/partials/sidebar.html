@@ -4,7 +4,10 @@
 
     {{ if .Site.Params.sidebarphoto}}
       <a href="/">
-      <img src="{{ .Site.Params.sidebarphoto }}" class="sidebarphoto">
+      <picture>
+        <source type="image/webp" srcset="{{ .Site.Params.sidebarphoto_webp }}">
+        <img src="{{ .Site.Params.sidebarphoto }}" class="sidebarphoto" alt="">
+      </picture>
       </a>
     {{ end }}
 
