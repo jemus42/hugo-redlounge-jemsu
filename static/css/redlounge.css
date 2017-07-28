@@ -121,15 +121,25 @@ h2.brand-tagline {
     padding-bottom: 1rem;
 }
 .nav-list-taxonomies {
-    margin: 1rem 0 0 0;
-    padding: 0;
+    margin: 1rem 0 0 2rem;
+    padding: 0 0 0 1rem;
     list-style: none;
 }
 .nav-list-social {
-    margin: 2rem 0 0 0;
-    padding: 0;
+    /*margin: 2rem 0 0 0;
+    text-align: right;
+    padding: initial;
+    list-style: none;*/
+
+    margin: 1rem 0 0 0;
+    padding: 0 0 0 1rem;
     list-style: none;
+    font-size: 0.8rem;
 }
+/*
+.social-buttons {
+    margin-right: 2rem;
+}*/
 .nav-item {
     display: inline-block;
     *display: inline;
@@ -156,6 +166,9 @@ h2.brand-tagline {
 	color: #E54028;
 	letter-spacing: -0.35rem;
 	margin-right: 0.4rem;
+}
+.nav-list-taxonomies a {
+    font-size: 0.8rem;
 }
 
 /* Posts */
@@ -342,6 +355,17 @@ a.post-category:hover {
 	text-decoration: underline;
 }
 
+/* Figures */
+figure {
+    margin: 2rem 3rem;
+}
+
+figcaption {
+    display: inline;
+    font-size: 0.65rem;
+    color: #aeaeae;
+}
+
 /* Tags */
 .tags-list {
 	clear: left;
@@ -424,7 +448,7 @@ nav#TableOfContents ul:first-child {
     }
 
     .header {
-        margin: 39% 2rem 39% 4rem;
+        margin: 25% 2rem 10% 2rem;
         text-align: right;
     }
 

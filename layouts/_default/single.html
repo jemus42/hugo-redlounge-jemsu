@@ -26,15 +26,21 @@
             <section class="post-content">
                 {{ .Content }}
             </section>
-            {{ if not .Params.nosocialsharing }}
-            {{ partial "socialsharing.html" . }}
-            {{ end }}
             {{ if .Params.tags }}
             <div class="tags-list">
-                <span class="dark-red">Tags</span>
+                <span class="dark-red">Tagged with</span>
                 <span class="decorative-marker">//</span>
                 {{ range .Params.tags }}
                 <a class="post-tag post-tag-{{ . | urlize }}" href="/tags/{{ . | urlize }}">{{ . }}</a>
+                {{ end }}
+            </div>
+            {{ end }}
+            {{ if .Params.shows }}
+            <div class="tags-list">
+                <span class="dark-red">Shows mentioned</span>
+                <span class="decorative-marker">//</span>
+                {{ range .Params.shows }}
+                <a class="post-tag post-show-{{ . | urlize }}" href="/shows/{{ . | urlize }}">{{ . }}</a>
                 {{ end }}
             </div>
             {{ end }}
@@ -42,17 +48,20 @@
             <div class="paging">
                 {{ if .NextInSection }}
                 <div class="paging-older">
-                    <span class="dark-red">Newer</span><span class="decorative-marker">//</span>
+                    <span class="dark-red">Next post</span><span class="decorative-marker">//</span>
                     <a class="paging-link" href="{{ .NextInSection.RelPermalink }}">{{ .NextInSection.Title }}</a>
                 </div>
                 {{ end }}
                 {{ if .PrevInSection }}
                 <div class="paging-newer">
-                    <span class="dark-red">Older</span><span class="decorative-marker">//</span>
+                    <span class="dark-red">Previous post</span><span class="decorative-marker">//</span>
                     <a class="paging-link" href="{{ .PrevInSection.RelPermalink }}">{{ .PrevInSection.Title }}</a>
                 </div>
                 {{ end }}
             </div>
+            {{ end }}
+            {{ if not .Params.nosocialsharing }}
+            {{ partial "socialsharing.html" . }}
             {{ end }}
         </section>
     {{ if not .Params.nocomment }}

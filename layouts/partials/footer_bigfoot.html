@@ -1,4 +1,4 @@
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"> </script>
+{{ if .Site.Params.bigfoot }}
 <script src="{{ "/js/bigfoot.min.js" | relURL }}"></script>
 <script type="text/javascript">
     var bigfoot = $.bigfoot(
@@ -6,4 +6,4 @@
             hoverDelay: 250
         }
     );
-</script>
+</script>{{ end }}
