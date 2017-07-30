@@ -19,7 +19,7 @@
                 </header>
             {{ partial "post_meta.html" . }}
             <article class="post-summary">
-                  {{ .Content | safeHTML | truncate 300 }}
+                  {{ .Content | safeHTML | truncate 200 }}
             </article>
               <div class="read-more-link">
                   <a href="{{ .RelPermalink }}"><span class="read-more-slashes">//</span>
