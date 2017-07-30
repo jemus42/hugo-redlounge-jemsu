@@ -295,6 +295,9 @@ a.post-author {
 .post-summary {
 	margin-top: 0.5rem;
 }
+.post-summary p > img {
+    max-width: 50%;
+}
 .read-more-link {
 	float: left;
 	clear: left;
