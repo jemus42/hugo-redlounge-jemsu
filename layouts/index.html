@@ -5,29 +5,32 @@
         <div class="content pure-u-1 pure-u-md-3-4">
           {{ partial "listtop.html" . }}
           <div class="posts">
-            {{ range where .Pages "Section" "post" }}
+          {{ range first 10 (where .Data.Pages "Section" "post") }}
+          {{ if not .Params.debug }}
             <section  class="post">
-                <header class="post-header">
-                    {{ if .Params.thumbnail }}
-                    <div class="post-avatar-wrapper">
-                        <img class="post-avatar" alt="" src="{{ .Params.thumbnail }}">
-                    </div>
-                    {{ end }}
-                    <h1 class="post-title">
-                      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                    </h1>
+              <header class="post-header">
+                  {{ if .Params.thumbnail }}
+                  <div class="post-avatar-wrapper">
+                      <img class="post-avatar" alt="" src="{{ .Params.thumbnail }}">
+                  </div>
+                  {{ end }}
+                  <h1 class="post-title">
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                  </h1>
                 </header>
-            {{ partial "post_meta.html" . }}
-            <article class="post-summary">
-                  {{ .Content | safeHTML | truncate 200 }}
-            </article>
-              <div class="read-more-link">
-                  <a href="{{ .RelPermalink }}"><span class="read-more-slashes">//</span>
-                    Read More…
-                  </a>
-              </div>
-          </section>
-          {{ end }}
+              {{ partial "post_meta.html" . }}
+              <article class="post-summary">
+                <blockquote>
+                  {{ .Content | safeHTML | truncate 200 }}              
+                </blockquote>
+              </article>
+                <div class="read-more-link">
+                    <a href="{{ .RelPermalink }}"><span class="read-more-slashes">//</span>
+                      Read More…
+                    </a>
+                </div>
+            </section>
+          {{ end }}{{ end }}
         </div>
         {{ partial "footer.html" . }}
         </div>

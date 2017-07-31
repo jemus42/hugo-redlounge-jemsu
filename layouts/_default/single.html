@@ -26,24 +26,7 @@
             <section class="post-content">
                 {{ .Content }}
             </section>
-            {{ if .Params.tags }}
-            <div class="tags-list">
-                <span class="dark-red">Tagged with</span>
-                <span class="decorative-marker">//</span>
-                {{ range .Params.tags }}
-                <a class="post-tag post-tag-{{ . | urlize }}" href="/tags/{{ . | urlize }}">{{ . }}</a>
-                {{ end }}
-            </div>
-            {{ end }}
-            {{ if .Params.shows }}
-            <div class="tags-list">
-                <span class="dark-red">Shows mentioned</span>
-                <span class="decorative-marker">//</span>
-                {{ range .Params.shows }}
-                <a class="post-tag post-show-{{ . | urlize }}" href="/shows/{{ . | urlize }}">{{ . }}</a>
-                {{ end }}
-            </div>
-            {{ end }}
+            {{ partial "post_taxonomies" . }}
             {{ if not .Params.nopaging }}
             <div class="paging">
                 {{ if .NextInSection }}
@@ -61,11 +44,11 @@
             </div>
             {{ end }}
             {{ if not .Params.nosocialsharing }}
-            {{ partial "socialsharing.html" . }}
+                {{ partial "socialsharing.html" . }}
             {{ end }}
         </section>
     {{ if not .Params.nocomment }}
-    {{ partial "disqus.html" . }}
+        {{ partial "disqus.html" . }}
     {{ end }}
     {{ partial "footer.html" . }}
     </div>

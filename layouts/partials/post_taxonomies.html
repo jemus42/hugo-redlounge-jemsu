@@ -1,0 +1,27 @@
+{{ if .Params.tags }}
+<div class="tags-list">
+    <span class="dark-red">Tagged with</span>
+    <span class="decorative-marker">//</span>
+    {{ range .Params.tags }}
+    <a class="post-tag post-tag-{{ . | urlize }}" href="/tags/{{ . | urlize }}">{{ . }}</a>
+    {{ end }}
+</div>
+{{ end }}
+{{ if .Params.shows }}
+<div class="tags-list">
+    <span class="dark-red">Shows mentioned</span>
+    <span class="decorative-marker">//</span>
+    {{ range .Params.shows }}
+    <a class="post-show post-show-{{ . | urlize }}" href="/shows/{{ . | urlize }}">{{ . }}</a>
+    {{ end }}
+</div>
+{{ end }}
+{{ if .Params.packages }}
+<div class="tags-list">
+    <span class="dark-red">R Packages</span>
+    <span class="decorative-marker">//</span>
+    {{ range .Params.packages }}
+    <a class="post-pkg post-pkg-{{ . | urlize }}" href="/packages/{{ . | urlize }}">{{ . }}</a>
+    {{ end }}
+</div>
+{{ end }}
