@@ -136,10 +136,11 @@ h2.brand-tagline {
     list-style: none;
     font-size: 0.8rem;
 }
-/*
-.social-buttons {
-    margin-right: 2rem;
-}*/
+
+.social-sharing {
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
 .nav-item {
     display: inline-block;
     *display: inline;
@@ -374,7 +375,7 @@ figcaption {
 /* Tags */
 .tags-list {
 	clear: left;
-	margin-bottom: 0.75rem;
+	margin-bottom: 0rem;
 	font-size: 0.85rem;
 	color: #999;
 }
@@ -398,6 +399,10 @@ figcaption {
 }
 .paging-older, .paging-newer {
 	margin-bottom: 0.25rem;
+}
+
+.paging-newer {
+    float: right;
 }
 
 /* ToC */

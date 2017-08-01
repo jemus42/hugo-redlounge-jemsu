@@ -26,20 +26,22 @@
             <section class="post-content">
                 {{ .Content }}
             </section>
+            <div class="tags-footer">
             {{ partial "post_taxonomies" . }}
+            </div>
             {{ if not .Params.nopaging }}
             <div class="paging">
-                {{ if .NextInSection }}
-                <div class="paging-older">
-                    <span class="dark-red">Next post</span><span class="decorative-marker">//</span>
-                    <a class="paging-link" href="{{ .NextInSection.RelPermalink }}">{{ .NextInSection.Title }}</a>
-                </div>
-                {{ end }}
                 {{ if .PrevInSection }}
-                <div class="paging-newer">
+                <span class="paging-older">
                     <span class="dark-red">Previous post</span><span class="decorative-marker">//</span>
                     <a class="paging-link" href="{{ .PrevInSection.RelPermalink }}">{{ .PrevInSection.Title }}</a>
-                </div>
+                </span>
+                {{ end }}
+                {{ if .NextInSection }}
+                <span class="paging-newer">
+                    <span class="dark-red">Next post</span><span class="decorative-marker">//</span>
+                    <a class="paging-link" href="{{ .NextInSection.RelPermalink }}">{{ .NextInSection.Title }}</a>
+                </span>
                 {{ end }}
             </div>
             {{ end }}
