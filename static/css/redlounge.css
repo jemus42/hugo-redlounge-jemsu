@@ -299,6 +299,9 @@ a.post-author {
 .post-summary p > img {
     max-width: 50%;
 }
+.post-summary blockquote {
+  border-left: .25rem solid #2d303b;
+}
 .read-more-link {
 	float: left;
 	clear: left;
