@@ -20,7 +20,7 @@
                 </header>
               {{ partial "post_meta.html" . }}
               <article class="post-summary">
-                <blockquote>
+                <blockquote class="post-summary">
                   {{ .Content | safeHTML | truncate 200 }}              
                 </blockquote>
               </article>
