@@ -1,11 +1,9 @@
 {{ partial "header.html" . }}
 <body>
-	<div id="layout" class="pure-g">
+  <div id="layout" class="pure-g">
     {{ partial "sidebar.html" . }}
-
     <div class="content pure-u-1 pure-u-md-3-4">
       {{ partial "listtop.html" . }}
-
       <div class="posts">
         {{ range .Pages }}
           <section  class="post">
@@ -21,15 +19,16 @@
             </header>
             {{ partial "post_meta.html" . }}
             <article class="post-summary">
-            	{{ .Content | safeHTML | truncate 100 }}
+                <blockquote class="post-summary">
+                  {{ .Content | safeHTML | truncate 200 }}              
+                </blockquote>
             </article>
-      			<div class="read-more-link">
-      				<a href="{{ .RelPermalink }}"><span class="read-more-slashes">//</span>Read More…</a>
-      			</div>
+            <div class="read-more-link">
+              <a href="{{ .RelPermalink }}"><span class="read-more-slashes">//</span>Read More…</a>
+            </div>
           </section>
         {{ end }}
       </div>
-
       {{ partial "footer.html" . }}
     </div>
   </div>
