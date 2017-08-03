@@ -494,7 +494,6 @@ nav#TableOfContents ul:first-child {
 	    border-radius: 30%;
 	    -moz-border-radius: 30%;
 	    -webkit-border-radius: 30%;
-	    transform: scale(1.15);
 	}
 
 }
@@ -527,7 +526,6 @@ nav#TableOfContents ul:first-child {
 	    border-radius: 30%;
 	    -moz-border-radius: 30%;
 	    -webkit-border-radius: 30%;
-	    transform: scale(1.15);
 	}
 
     .sidebar {
