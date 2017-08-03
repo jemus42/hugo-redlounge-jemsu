@@ -18,7 +18,7 @@
                     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                   </h1>
               </header>
-              {{ partial "post_meta.html" . }}
+              {{ partial "post/post_meta.html" . }}
               <article class="post-summary">
                 <blockquote class="post-summary">
                   {{ .Content | safeHTML | truncate 200 }}              

@@ -22,12 +22,12 @@
                 {{ .Params.subtitle }}
             </h3>
             {{ end }}
-            {{ partial "post_meta.html" . }}
+            {{ partial "post/post_meta.html" . }}
             <section class="post-content">
                 {{ .Content }}
             </section>
             <div class="tags-footer">
-            {{ partial "post_taxonomies" . }}
+            {{ partial "post/post_taxonomies" . }}
             </div>
             {{ if not .Params.nopaging }}
             <div class="paging">
@@ -46,11 +46,11 @@
             </div>
             {{ end }}
             {{ if not .Params.nosocialsharing }}
-                {{ partial "socialsharing.html" . }}
+                {{ partial "post/socialsharing.html" . }}
             {{ end }}
         </section>
     {{ if not .Params.nocomment }}
-        {{ partial "disqus.html" . }}
+        {{ partial "post/disqus.html" . }}
     {{ end }}
     {{ partial "footer.html" . }}
     </div>
