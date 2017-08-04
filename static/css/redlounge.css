@@ -102,6 +102,7 @@ h2.brand-tagline {
 }
 .sidebar {
 	background: #2d303b;
+    overflow: auto;
 }
 .sidebar, .sidebar p {
 	color: #8b8b8b;
@@ -532,6 +533,7 @@ nav#TableOfContents ul:first-child {
         position: fixed;
         top: 0;
         bottom: 0;
+        overflow: auto;
     }
 }
 
