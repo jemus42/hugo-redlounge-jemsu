@@ -22,8 +22,8 @@
     {{ end }}
     {{ if .Params.categories }}
     <span class="post-categories">
+    <span class="decorative-marker">/</span>
         {{ range .Params.categories }}
-        <span class="decorative-marker">/</span>
         <a class="post-category post-category-{{ . | urlize }}" href="/categories/{{ . | urlize }}">{{ . }}</a>
         {{ end }}
     </span>

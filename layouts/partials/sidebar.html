@@ -27,23 +27,19 @@
         {{ end }}
       </ul>
 
-    {{ range $key, $value := .Site.Taxonomies }}
-    {{ if eq $key "categories" }}
     <section>
-      <header class="nav-item">{{ upper $key }}</header>
-
       <ul class="nav-list-taxonomies">
-        {{ range first 6 $value.ByCount }}
-        <li class="nav-item">
-          <span class="nav-item-separator">//</span>
-          <a href="/{{ $key }}/{{ .Name | urlize }}">{{ .Name }}</a>
-        </li>
+        {{ range .Site.Menus.taxonomies }}
+          {{ if .URL }}
+          <li class="nav-item">
+            <span class="nav-item-separator">//</span>
+            <a href="{{ .URL }}" alt="{{ .Name }}">{{ upper .Name }}</a>
+          </li>
+          {{ end }}
         {{ end }}
       </ul>
-
     </section>
-    {{ end }}
-    {{ end }}
+
     {{ if .Site.Menus.social }}
     <div class="social-buttons">
       <ul class="nav-list-social">
