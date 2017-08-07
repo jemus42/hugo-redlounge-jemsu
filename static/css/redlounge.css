@@ -125,6 +125,7 @@ h2.brand-tagline {
     margin: 1rem 0 0 0;
     padding: 0 0 0 1rem;
     list-style: none;
+    display: grid;
 }
 .nav-list-social {
     /*margin: 2rem 0 0 0;
@@ -169,11 +170,6 @@ h2.brand-tagline {
 	letter-spacing: -0.35rem;
 	margin-right: 0.4rem;
 }
-/*
-.nav-list-taxonomies a {
-    font-size: 0.8rem;
-}
-*/
 
 /* Posts */
 h1.post-title a {
