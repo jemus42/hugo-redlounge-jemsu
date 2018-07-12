@@ -5,7 +5,7 @@
         <div class="content pure-u-1 pure-u-md-3-4">
           {{ partial "listtop.html" . }}
           <div class="posts">
-          {{ range first 10 (where .Data.Pages "Section" "post") }}
+          {{ range first 15 (where .Data.Pages "Section" "post") }}
           {{ if not .Params.debug }}
             <section  class="post">
               <header class="post-header">

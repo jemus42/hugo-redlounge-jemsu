@@ -45,13 +45,7 @@
                 {{ end }}
             </div>
             {{ end }}
-            {{ if not .Params.nosocialsharing }}
-                {{ partial "post/socialsharing.html" . }}
-            {{ end }}
         </section>
-    {{ if not .Params.nocomment }}
-        {{ partial "post/disqus.html" . }}
-    {{ end }}
     {{ partial "footer.html" . }}
     </div>
     </div>
