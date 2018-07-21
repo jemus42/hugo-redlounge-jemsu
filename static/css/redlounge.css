@@ -265,6 +265,8 @@ a.post-author {
 .post table {
     margin-bottom: 1.75rem;
     margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 .post-title {
     font-size: 2rem;
@@ -390,7 +392,7 @@ table {
   /* border: 1px solid #e5e5e5; looks bad if table is less than full width bc of display: block */
   border-collapse: collapse;
   border: none;
-  display: block;
+  /*display: block;*/
   overflow-x: auto;
 }
 
@@ -586,7 +588,7 @@ hr.thin {
   font-size: 12px;
 }
 
-/* (Almost) Original highlight github theme */
+/* (Almost) Original highlight github theme
 .hljs{display:block;overflow-x:auto;padding:0.5em;color:#333;background:#fcfcfc}
 .hljs-comment,.hljs-quote{color:#998;font-style:italic}
 .hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:bold}
@@ -604,8 +606,9 @@ hr.thin {
 .hljs-addition{background:#dfd}
 .hljs-emphasis{font-style:italic}
 .hljs-strong{font-weight:bold}
+*/
 
-/* Styling categories */
+/* Styling categories 
 .post-category-rstats {
   color: #fff;
   background: #77ABD9;
@@ -621,4 +624,4 @@ hr.thin {
 .post-category-lolz {
   color: #fff;
   background: #2d303b;
-}
+}*/
