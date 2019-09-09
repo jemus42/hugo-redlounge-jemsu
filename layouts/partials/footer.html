@@ -1,12 +1,10 @@
 <footer>
 <hr class="thin" />
     <ul class="footer-links">
-    {{ if .RSSLink }}
       <li>
         <span class="decorative-marker">//</span>
-        <a href="{{ .RSSLink }}"><i class='fa fa-rss'></i></a>
+        <a href='{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}'><i class='fa fa-rss'></i></a>
       </li>
-    {{ end }}
       <li>
         <span class="decorative-marker">//</span>
         <a>{{ .Site.Params.author }}</a>
